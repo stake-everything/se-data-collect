@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Goose Defi",
+        "tag": "goosedefi",
+        "urls": "https://www.goosedefi.com/nests",
+        "type": "goose"
+    },
+    {
+        "name": "Viking Swap",
+        "tag": "vikingswap",
+        "urls": "https://www.vikingswap.finance/nests",
+        "tdiv": "sc-ikPAkQ diwHUn",
+        "ldiv": "sc-gsTCUz cBbMuj",
+        "coin": "h2",
+        "type": "viking"
+    },
+    {
+        "name": "Gecko Swap",
+        "tag": "geckoswap",
+        "urls": "https://geckoswap.finance/pools",
+        "tdiv": "sc-dkIXFM kptQvf",
+        "ldiv": "sc-gsTCUz dAOnGB",
+        "coin": "h2",
+        "type": "viking"
+    },
+    {
+        "name": "Pancake Bunny",
+        "tag": "pancakebunny",
+        "urls": "https://pancakebunny.finance/pool",
+        "type": "bunny"
+    },
+    {
+        "name": "Auto Farm",
+        "tag": "auto",
+        "urls": "https://autofarm.network/",
+        "type": "auto"
+    },
+    {
+        "name": "Beefy Finance",
+        "tag": "beefyfinance",
+        "urls": "https://autofarm.network/",
+        "type": "beefy"
+    },
+    {
+        "name": "ACryptoS",
+        "tag": "acryptos",
+        "urls": "https://app.acryptos.com/",
+        "type": "acryptos"
+    }
+]
