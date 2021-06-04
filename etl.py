@@ -1,6 +1,7 @@
 import json
 import pyrebase
 from collect import Scrape
+import time
 
 """
 {"BUSD":[
@@ -20,7 +21,7 @@ class Etl:
         if data_path == None:
             data_path = ""
         if config_path == None:
-            config_path = "../../"
+            config_path = "../"
 
         with open(data_path+"data.json") as f:
             self.DATA = json.load(f)
@@ -48,17 +49,22 @@ class Etl:
 
             S = []
             for tag in tags:
+                _tag_coins = self.DATA[tag].keys()
+                if coin in _tag_coins:
+                    _data = self.DATA[tag][coin]
+                    keys = _data.keys()
 
-                try:
-                    d = {"site": self.DATA[tag][coin]["name"],
-                         "url": self.DATA[tag][coin]["url"],
-                         "apr": self.DATA[tag][coin]["apr"],
-                         "apy": self.DATA[tag][coin]["apy"],
-                         "token_earned": self.DATA[tag][coin]["earn"]
+                    d = {"site": _data["name"],
+                         "url": _data["url"],
+                         "token_earned": _data["earn"]
                          }
+
+                    if "apy" in list(_data.keys()):
+                        d["apy"] = _data["apy"]
+                    elif "apr" in list(_data.keys()):
+                        d["apr"] = _data["apr"]
+
                     S.append(d)
-                except KeyError:
-                    pass
 
             dtop = {"info": S}
             try:
@@ -74,25 +80,61 @@ class Etl:
 
         return coins_dict
 
-    def update_db(self):
-
+    def update_coins_db(self, over_write=False):
         coins_list = self.get_coins()
         coins_dict = self.create_coins_dict(coins_list)
         self.db.update({"coins": coins_dict})
+
+    def update_historic_db(self):
+        farm_tags = self.DATA.keys()
+
+        hist = {}
+        print(farm_tags)
+        for tag in farm_tags:
+            _tag_coins = self.DATA[tag].keys()
+            for coin in _tag_coins:
+                print(tag, coin)
+
+                _coin_keys = self.DATA[tag][coin].keys()
+
+                out = self.db.child("historic").child(
+                    tag).child(coin).get().val()
+
+                if out != None:
+                    out = dict(out)
+                    vals = out["values"]
+
+                    if "apr" in _coin_keys:
+                        vals.append(
+                            self.DATA[tag][coin]["apr"])
+                    elif "apy" in _coin_keys:
+                        vals.append(
+                            self.DATA[tag][coin]["apy"])
+
+                    print(vals)
+
+                    self.db.child("historic").child(
+                        tag).child(coin).update({"t": out["t"].append(time.time())})
+
+                    self.db.child("historic").child(tag).child(
+                        coin).update({"values": vals})
+
+                elif out == None:
+
+                    newd = {"t": [time.time()]}
+                    if "apr" in _coin_keys:
+                        val = self.DATA[tag][coin]["apr"]
+                    elif "apy" in _coin_keys:
+                        val = self.DATA[tag][coin]["apy"]
+
+                    if type(val) == float:
+                        newd["values"] = [val]
+                        self.db.child("historic").child(
+                            tag).child(coin).set(newd)
 
 
 if __name__ == "__main__":
 
     etl = Etl()
-    s = Scrape()
-
-    # s.acryptos()
-    s.bunny()
-    s.auto()
-    s.viking()
-    s.goose()
-
-    s.export()
-
-    print(s.DATA)
-    etl.update_db()
+    # etl.update_coins_db()
+    etl.update_historic_db()

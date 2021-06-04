@@ -38,7 +38,7 @@
     {
         "name": "Beefy Finance",
         "tag": "beefyfinance",
-        "urls": "https://autofarm.network/",
+        "urls": "https://app.beefy.finance/",
         "type": "beefy"
     },
     {
@@ -46,5 +46,23 @@
         "tag": "acryptos",
         "urls": "https://app.acryptos.com/",
         "type": "acryptos"
+    },
+    {
+        "name": "Jet Fuel Finance",
+        "tag": "jetfuel",
+        "urls": "https://jetfuel.finance/vaults",
+        "type": "jetfuel"
+    },
+    {
+        "name": "Cream Finance",
+        "tag": "cream",
+        "urls": "https://app.cream.finance/",
+        "type": "cream"
+    },
+    {
+        "name": "For Tube",
+        "tag": "fortube",
+        "urls": "https://for.tube/market/index",
+        "type": "fortube"
     }
 ]

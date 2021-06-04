@@ -1,10 +1,14 @@
 {
+    "AUTO": "https://autofarm.network/logo-round.svg",
     "BNB": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010",
-    "ETH": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=010",
+    "BUNNY": "console.firebase.google.com/project/decoded-jigsaw-163122/database/decoded-jigsaw-163122-default-rtdb/data",
+    "BANANA": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95/logo.png",
+    "BETH": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=010",
     "BUSD": "https://cryptologos.cc/logos/binance-usd-busd-logo.svg?v=010",
+    "ETH": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=010",
     "ACS": "https://app.acryptos.com/images/tokens/acs.svg",
     "USDT": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=010",
-    "Link": "https://cryptologos.cc/logos/chainlink-link-logo.svg?v=010",
+    "LINK": "https://cryptologos.cc/logos/chainlink-link-logo.svg?v=010",
     "USDC": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=010",
     "DAI": "https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.svg?v=010",
     "DOT": "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=010",
@@ -14,7 +18,5 @@
     "EGG": "https://bscscan.com/token/images/goosedefi_32.png",
     "GECKO": "https://geckoswap.finance/images/egg/2.png",
     "VIKING": "https://www.vikingswap.finance/images/egg/2.png",
-    "WBNB": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010",
-    "BUNNY": "https://pancakebunny.finance/static/media/token-bunny.9186f99f.svg",
-    "BANANA": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95/logo.png"
+    "WBNB": "https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010"
 }
