@@ -3,66 +3,98 @@
         "name": "Goose Defi",
         "tag": "goosedefi",
         "urls": "https://www.goosedefi.com/nests",
-        "type": "goose"
+        "type": "goose",
+        "code": 1
     },
     {
         "name": "Viking Swap",
         "tag": "vikingswap",
         "urls": "https://www.vikingswap.finance/nests",
-        "tdiv": "sc-ikPAkQ diwHUn",
-        "ldiv": "sc-gsTCUz cBbMuj",
-        "coin": "h2",
-        "type": "viking"
+        "type": "viking",
+        "code": 1
     },
     {
         "name": "Gecko Swap",
         "tag": "geckoswap",
         "urls": "https://geckoswap.finance/pools",
-        "tdiv": "sc-dkIXFM kptQvf",
-        "ldiv": "sc-gsTCUz dAOnGB",
-        "coin": "h2",
-        "type": "viking"
+        "type": "viking",
+        "code": 1
     },
     {
         "name": "Pancake Bunny",
         "tag": "pancakebunny",
         "urls": "https://pancakebunny.finance/pool",
-        "type": "bunny"
+        "type": "bunny",
+        "code": 1
     },
     {
         "name": "Auto Farm",
         "tag": "auto",
         "urls": "https://autofarm.network/",
-        "type": "auto"
+        "type": "auto",
+        "code": 1
     },
     {
         "name": "Beefy Finance",
-        "tag": "beefyfinance",
+        "tag": "beefy",
         "urls": "https://app.beefy.finance/",
-        "type": "beefy"
+        "type": "beefy",
+        "code": 3
     },
     {
         "name": "ACryptoS",
         "tag": "acryptos",
         "urls": "https://app.acryptos.com/",
-        "type": "acryptos"
+        "type": "acryptos",
+        "code": 1
     },
     {
         "name": "Jet Fuel Finance",
         "tag": "jetfuel",
         "urls": "https://jetfuel.finance/vaults",
-        "type": "jetfuel"
+        "type": "jetfuel",
+        "code": 1
     },
     {
-        "name": "Cream Finance",
+        "name": "CREAM Finance",
         "tag": "cream",
         "urls": "https://app.cream.finance/",
-        "type": "cream"
+        "type": "cream",
+        "code": 2
     },
     {
-        "name": "For Tube",
+        "name": "ForTube",
         "tag": "fortube",
         "urls": "https://for.tube/market/index",
-        "type": "fortube"
+        "type": "fortube",
+        "code": 4
+    },
+    {
+        "name": "Alpaca Finance",
+        "tag": "alpaca",
+        "urls": "https://app.alpacafinance.org/lend",
+        "type": "alpaca",
+        "code": 5
+    },
+    {
+        "name": "Wault Finance",
+        "tag": "wault",
+        "urls": "https://app.alpacafinance.org/lend",
+        "type": "wault",
+        "code": 5
+    },
+    {
+        "name": "Swamp Finance",
+        "tag": "swamp",
+        "urls": "https://swamp.finance/app/",
+        "type": "swap",
+        "code": 5
+    },
+    {
+        "name": "Kebab Finance",
+        "tag": "kebab",
+        "urls": "https://swamp.finance/app/",
+        "type": "kebab",
+        "code": 5
     }
 ]

@@ -1,0 +1,12 @@
+sleep: 15
+active_sites:
+  [
+    "beefy",
+    "cream",
+    "jetfuel",
+    "pancakebunny",
+    "acryptos",
+    "auto",
+    "vikingswap",
+  ]
+#active_sites: ["acryptos"]

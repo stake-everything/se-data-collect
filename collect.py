@@ -2,14 +2,25 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import ui
+from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 import time
 import json
 import os
+import requests
+import yaml
+from helpers import scroll_down_all, replace, Message
+import re
+from retry import retry
+
 
 os.environ['MOZ_HEADLESS'] = '1'
+m = Message()
 
 
-def update_data(site_data, coin, earn, earn_perc, name, url):
+def update_data(site_data, coin, earn, earn_perc, name, url, tag):
 
     def parse_perc(p):
         try:
@@ -25,11 +36,13 @@ def update_data(site_data, coin, earn, earn_perc, name, url):
         "earn": earn,
         "name": name,
         "url": url,
+        "tag": tag
     }
     site_data[coin][earn_perc[0]] = parse_perc(earn_perc[1])
 
 
-def auto(soup, name, url):
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def auto(soup, name, url, tag):
     IGNORE = []
     EARN_TYPE = "apy"
 
@@ -68,7 +81,7 @@ def auto(soup, name, url):
         if coin.find("-") != -1 or coin in IGNORE:
             pass
         else:
-            coin = coin.replace("belt", "").replace("i", "")
+            # coin = coin.replace("belt", "").replace("i", "")
 
             # get earn and earn_perc (%)
             earn = tdiv.find(earn_el["type"], {
@@ -77,12 +90,13 @@ def auto(soup, name, url):
                 perc_el["type"], {"class": perc_el["class"]}).text
 
             update_data(site_data, coin, earn,
-                        (EARN_TYPE, earn_perc), name, url)
+                        (EARN_TYPE, earn_perc), name, url, tag)
 
     return site_data
 
 
-def jetfuel(soup, name, url):
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def jetfuel(soup, name, url, tag):
     IGNORE = []
     EARN_TYPE = "apy"
 
@@ -122,77 +136,62 @@ def jetfuel(soup, name, url):
             earn_perc = (EARN_TYPE, apy)
 
             update_data(site_data, coin, earn, earn_perc,
-                        name, url)
+                        name, url, tag)
 
     return site_data
 
 
-def beefy(self):
-    driver = webdriver.Firefox()
-    for site in self.SITES:
-        if site["type"] == "beefy":
-            URL = site["urls"]
-            driver.get(URL)
-            time.sleep(15)
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def beefy(name, url, tag):
+    IGNORE = ["3EPS", "4BELT"]
+    tokens = ["BTC", "BNB", "ETH", "BUSD", "ZEC", "ALPACA"]
 
-            page_source = driver.page_source
-            soup = BeautifulSoup(page_source, 'lxml')
+    reg_str = "^(\w+)({})$".format("|".join([t.lower() for t in tokens]))
 
-            print(soup.prettify())
+    page = requests.get(
+        "https://github.com/beefyfinance/beefy-api/tree/master/src/api/stats/bsc")
 
-            tdivs = soup.find_all(
-                "div", {"class": "MuiGrid-root jss1564 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12since"})
+    soup = BeautifulSoup(page.content, "lxml")
+    j = requests.get("https://api.beefy.finance/apy").json()
 
-            print(tdivs[0])
+    a_s = soup.find_all("a", {"class": "js-navigation-open Link--primary"})
+    farms = [a.text.strip() for a in a_s[:-1]]
 
-            # coin = tdivs[0]
+    site_data = {}
+    for pair in list(j.keys()):
+        if pair.count("-") == 1:
+            farm = pair[:pair.find("-")]
+            coin = pair[pair.find("-")+1:]
 
-            driver.quit()
+            if re.search(reg_str, coin) == None:
+                coin = coin.upper()
+            elif re.search(reg_str, coin):
+                coin = replace(coin, tokens)
 
-            site_data = {}
-            for tdiv in tdivs:
+                print(coin)
 
-                coin = tdiv.find(
-                    "div", {"class": "label"}).find_all("span")[0].text
-                apy = tdiv.find(
-                    "div", {"class": "rates"}).find_all("span")[0].text
-                earn = tdiv.find("div", {"class": "details return"}).find_all(
-                    "span", {"class": "value"})[0].text
+            if farm in farms and coin not in IGNORE:
 
-                coin.replace("belt", "").replace("i", "")
+                rate = str(round(j[pair]*10, 2)) if j[pair] != None else "None"
 
-                if coin.find("-") == -1:
+                update_data(site_data, coin, coin,
+                            ("apy", rate), name, url, tag)
 
-                    d = {
-                        "stake": coin,
-                        "earn": earn,
-                        "apr": None,
-                        "apy": apy,
-                        "name": site["name"],
-                        "url": URL
-                    }
-                    site_data[coin] = d
-
-            if bool(site_data) != False:
-                self.DATA[site["name"]] = site_data
-    driver.quit()
+    return site_data
 
 
-def bunny(soup, name, url):
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def bunny(soup, name, url, tag):
     IGNORE = []
     EARN_TYPE = "apy"
 
     tdivs = soup.find_all("div", {"class": "row"})
-
-    print(tdivs)
 
     site_data = {}
     for tdiv in tdivs[1:]:
 
         coin = tdiv.find(
             "div", {"class": "label"}).find_all("span")[0].text
-
-        print(coin)
 
         if coin.find("-") != -1 or coin in IGNORE:
             pass
@@ -206,12 +205,13 @@ def bunny(soup, name, url):
                 "span", {"class": "value"})[0].text
 
             update_data(site_data, coin, earn, earn_perc,
-                        name, url)
+                        name, url, tag)
 
     return site_data
 
 
-def viking(soup, name, url):
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def viking(soup, name, url, tag):
     IGNORE = []
 
     tdivs = soup.find_all("div", {"class": "sc-ikPAkQ diwHUn"})
@@ -232,22 +232,24 @@ def viking(soup, name, url):
 
             earn_perc = ("apr", apr)
 
-            update_data(site_data, coin, earn, earn_perc, name, url)
+            update_data(site_data, coin, earn, earn_perc, name, url, tag)
 
     return site_data
 
 
-def acryptos(soup, name, url):
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def acryptos(soup, name, url, tag):
     IGNORE = ["A2B2", "ACS3", 'ACS3BTC', 'ACS4USD', 'ACS4VAI', 'ACS4UST']
 
     def get_earn(tdiv):
         try:
-            get_text = tdiv.find_all(
-                "a", {"class": "wallet-info"})[1].text
-            earn = get_text.replace("Get ", "")
-        except AttributeError:
             get_text = tdiv.find("span", {"class": "wallet-info"}).text
             get_text = get_text[:get_text.find(":")]
+            earn = get_text.replace("Get ", "")
+
+        except AttributeError:
+            get_text = tdiv.find_all(
+                "a", {"class": "wallet-info"})[1].text
             earn = get_text.replace("Get ", "")
         return earn
 
@@ -271,7 +273,7 @@ def acryptos(soup, name, url):
             earn = get_earn(tdiv)
 
             update_data(site_data, coin, earn, earn_perc,
-                        name, url)
+                        name, url, tag)
 
     return site_data
 
@@ -280,86 +282,133 @@ def gecko(soup, name, url):
     return viking(soup, name, url)
 
 
+# @retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def cream(soup, name, url, tag, earn_type="apy", IGNORE=[]):
+
+    t_tdiv = soup.find_all(
+        "div", {"class": "sc-dJjZJu cRWJtq rdt_TableBody"})
+
+    tdivs = t_tdiv[0].find_all(
+        "div", {"class": "sc-jrQzUz kKwhjt rdt_TableRow"})
+
+    site_data = {}
+    for tdiv in tdivs:
+
+        coin = tdiv.find("div", {
+            "class": "sc-hKwCoD sc-eCImvq sc-jRQAMF iFTwCY gTuvxR fdclGF rdt_TableCell"}).text
+
+        apy = tdiv.find("div", {
+            "class": "sc-hKwCoD sc-eCImvq sc-jRQAMF iFTwCY kOQSBM eIKzDm rdt_TableCell"}).text
+
+        earn = coin
+
+        if coin.find("-") != -1 or coin in IGNORE:
+            pass
+        else:
+
+            earn_perc = (earn_type, apy)
+            update_data(site_data, coin, earn, earn_perc,
+                        name, url, tag)
+
+    return site_data
+
+
 funcs = {
     "acryptos": acryptos,
     "auto": auto,
     "jetfuel": jetfuel,
     "beefy": beefy,
     "pancakebunny": bunny,
-    "vikingswap": viking
+    "vikingswap": viking,
+    "cream": cream
 }
 
 
-def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=False):
+@retry(exceptions=Exception, tries=3, delay=60*3, max_delay=None, backoff=60*2)
+def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=False, prod=False):
     DATA = {}
+    data = {}
 
     def export(_data):
         with open("data.json", "w") as fout:
             json.dump(_data, fout)
 
     if params_path == None:
-        params_path = "params.json"
+        params_path = "params.yaml"
     if sites_path == None:
         sites_path = "sites.json"
 
     with open(sites_path) as f:
         SITES = json.load(f)
     with open(params_path) as f:
-        params = json.load(f)
+        params = yaml.load(f, Loader=yaml.FullLoader)
         ACTIVE_SITES = params["active_sites"]
         SLEEP = params["sleep"]
 
     for site in SITES:
-        if site["tag"] in ACTIVE_SITES:
+        page_source = None
+        data = None
+        if site["tag"] in ACTIVE_SITES and site["code"] == 1:
             print(site["tag"])
-            driver = webdriver.Firefox()
+            # print(os.path.abspath("geckodriver"))
+            driver = webdriver.Firefox(
+                executable_path=os.path.abspath("geckodriver"))
             URL = site["urls"]
             driver.get(URL)
             time.sleep(SLEEP)
             page_source = driver.page_source
             driver.quit()
 
+        elif site["tag"] in ACTIVE_SITES and site["tag"] == "cream":
+            print(site["tag"])
+            driver = webdriver.Firefox(
+                executable_path=os.path.abspath("geckodriver"))
+            URL = site["urls"]
+            driver.get(URL)
+
+            wait = WebDriverWait(driver, 20)
+            actions = ActionChains(driver)
+
+            e = driver.find_element(By.XPATH, '//span[text()="Ethereum"]')
+            actions.move_to_element(e).perform()
+
+            wait.until(EC.visibility_of_element_located(
+                (By.XPATH, '//li[text()="BSC"]'))).click()
+
+            wait.until(EC.visibility_of_element_located(
+                (By.XPATH, '//div[text()="Show more"]'))).click()
+
+            time.sleep(SLEEP)
+            page_source = driver.page_source
+            driver.quit()
+
+        elif site["tag"] in ACTIVE_SITES and site["tag"] == "beefy":
+
+            data = funcs[site["tag"]](site["name"], site["urls"], site["tag"])
+
+            if bool(data) == False:
+                print("WARNING NO DATA")
+                if prod == True:
+                    m.email("{} return empty data".format(site["tag"]))
+
+        if page_source:
             soup = BeautifulSoup(page_source, 'lxml')
 
-            data = funcs[site["tag"]](soup, site["name"], URL)
+            data = funcs[site["tag"]](soup, site["name"], URL, site["tag"])
 
-            print(data)
+            if bool(data) == False:
+                print("WARNING NO DATA")
+                if prod == True:
+                    m.email("{} return empty data".format(site["tag"]))
+
+        if data:
             DATA[site["tag"]] = data
 
     if _export == True:
-        print(DATA)
         export(DATA)
+        print("data exported.")
 
 
 if __name__ == "__main__":
 
-    scrape_sites(_export=True)
-
-
-"""------------------------"""
-
-
-# def goose(soup, name, url):
-#     IGNORE = []
-#     EARN_TYPE = "apr"
-
-#     tdivs = soup.find_all("div", {"class": "sc-ikPAkQ diwHUn"})
-#     site_data = {}
-#     for tdiv in tdivs:
-#         ldivs = tdiv.find_all("div", {"class": "sc-gsTCUz UNsmv"})
-
-#         apr = ldivs[0].text
-#         earn_perc = (EARN_TYPE, apr)
-#         coin = ldivs[1].text
-#         earn = ldivs[2].text
-
-#         update_data(site_data, coin, earn, earn_perc,
-#                     name, url)
-#     return site_data
-
-"""
-        "jetfuel",
-        "acryptos",
-        "auto",
-        "vikingswap"
-"""
+    scrape_sites(_export=False)

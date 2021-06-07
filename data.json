@@ -1,1 +1,1080 @@
-{"pancakebunny": {}}
+{
+    "vikingswap": {
+        "VIKING": {
+            "stake": "VIKING",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 64.04
+        },
+        "BUSD": {
+            "stake": "BUSD",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 98.08
+        },
+        "WBNB": {
+            "stake": "WBNB",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 204.53
+        },
+        "EGG": {
+            "stake": "EGG",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 282.84
+        },
+        "USDT": {
+            "stake": "USDT",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 65.57
+        },
+        "BTCB": {
+            "stake": "BTCB",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 83.56
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 200.08
+        },
+        "DAI": {
+            "stake": "DAI",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 27.26
+        },
+        "USDC": {
+            "stake": "USDC",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 129.39
+        },
+        "DOT": {
+            "stake": "DOT",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 279.48
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 300.51
+        },
+        "BSCX": {
+            "stake": "BSCX",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 88.23
+        },
+        "AUTO": {
+            "stake": "AUTO",
+            "earn": "VIKING",
+            "name": "Viking Swap",
+            "url": "https://www.vikingswap.finance/nests",
+            "tag": "vikingswap",
+            "apr": 258.19
+        }
+    },
+    "pancakebunny": {
+        "BUNNY": {
+            "stake": "BUNNY",
+            "earn": "WBNB",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 224.82
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "CAKE + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 127.54
+        },
+        "BNB": {
+            "stake": "BNB",
+            "earn": "BNB + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 12.15
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "ETH + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 0.98
+        },
+        "BTCB": {
+            "stake": "BTCB",
+            "earn": "BTCB + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 1.42
+        },
+        "USDT": {
+            "stake": "USDT",
+            "earn": "USDT + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 9.77
+        },
+        "BUSD": {
+            "stake": "BUSD",
+            "earn": "BUSD + BUNNY",
+            "name": "Pancake Bunny",
+            "url": "https://pancakebunny.finance/pool",
+            "tag": "pancakebunny",
+            "apy": 11.45
+        }
+    },
+    "auto": {
+        "AUTO": {
+            "stake": "AUTO",
+            "earn": "AUTO",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 27.96
+        },
+        "beltBNB": {
+            "stake": "beltBNB",
+            "earn": "Belt",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 46.13
+        },
+        "beltBTC": {
+            "stake": "beltBTC",
+            "earn": "Belt",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 19.51
+        },
+        "beltETH": {
+            "stake": "beltETH",
+            "earn": "Belt",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 15.91
+        },
+        "WEX": {
+            "stake": "WEX",
+            "earn": "Wault",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 345.62
+        },
+        "BGOV": {
+            "stake": "BGOV",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 70.29
+        },
+        "iBNB": {
+            "stake": "iBNB",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 40.97
+        },
+        "iBUSD": {
+            "stake": "iBUSD",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 22.17
+        },
+        "iUSDT": {
+            "stake": "iUSDT",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 20.4
+        },
+        "iBTC": {
+            "stake": "iBTC",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 9.98
+        },
+        "iETH": {
+            "stake": "iETH",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 6.54
+        },
+        "iLINK": {
+            "stake": "iLINK",
+            "earn": "BZX",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 10.6
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "Pancake (v2)",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 123.39
+        },
+        "BANANA": {
+            "stake": "BANANA",
+            "earn": "ApeSwap",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 244.8
+        },
+        "WINGS": {
+            "stake": "WINGS",
+            "earn": "Jet",
+            "name": "Auto Farm",
+            "url": "https://autofarm.network/",
+            "tag": "auto",
+            "apy": 46100.0
+        }
+    },
+    "beefy": {
+        "MDX": {
+            "stake": "MDX",
+            "earn": "MDX",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 20.42
+        },
+        "1INCH": {
+            "stake": "1INCH",
+            "earn": "1INCH",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.85
+        },
+        "SALPACA": {
+            "stake": "SALPACA",
+            "earn": "SALPACA",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 5.97
+        },
+        "ibBNB": {
+            "stake": "ibBNB",
+            "earn": "ibBNB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.05
+        },
+        "ibBUSD": {
+            "stake": "ibBUSD",
+            "earn": "ibBUSD",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.75
+        },
+        "beltBNB": {
+            "stake": "beltBNB",
+            "earn": "beltBNB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 5.05
+        },
+        "beltBTC": {
+            "stake": "beltBTC",
+            "earn": "beltBTC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 2.0
+        },
+        "beltETH": {
+            "stake": "beltETH",
+            "earn": "beltETH",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.64
+        },
+        "wBNB": {
+            "stake": "wBNB",
+            "earn": "wBNB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.38
+        },
+        "BUSD": {
+            "stake": "BUSD",
+            "earn": "BUSD",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.33
+        },
+        "BTC": {
+            "stake": "BTC",
+            "earn": "BTC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": null
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "ETH",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.19
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "CAKE",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 13.21
+        },
+        "USDT": {
+            "stake": "USDT",
+            "earn": "USDT",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.19
+        },
+        "USDC": {
+            "stake": "USDC",
+            "earn": "USDC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.3
+        },
+        "BAKE": {
+            "stake": "BAKE",
+            "earn": "BAKE",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.87
+        },
+        "BHC": {
+            "stake": "BHC",
+            "earn": "BHC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 2.86
+        },
+        "BUNNY": {
+            "stake": "BUNNY",
+            "earn": "BUNNY",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 17.45
+        },
+        "renBTC": {
+            "stake": "renBTC",
+            "earn": "renBTC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.75
+        },
+        "EPS": {
+            "stake": "EPS",
+            "earn": "EPS",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 15.04
+        },
+        "BNB": {
+            "stake": "BNB",
+            "earn": "BNB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.38
+        },
+        "GRAND": {
+            "stake": "GRAND",
+            "earn": "GRAND",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 157.55
+        },
+        "KEBAB": {
+            "stake": "KEBAB",
+            "earn": "KEBAB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 17.97
+        },
+        "ADA": {
+            "stake": "ADA",
+            "earn": "ADA",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.22
+        },
+        "bETH": {
+            "stake": "bETH",
+            "earn": "bETH",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.41
+        },
+        "DAI": {
+            "stake": "DAI",
+            "earn": "DAI",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.3
+        },
+        "FIL": {
+            "stake": "FIL",
+            "earn": "FIL",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.67
+        },
+        "BCH": {
+            "stake": "BCH",
+            "earn": "BCH",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.39
+        },
+        "DOT": {
+            "stake": "DOT",
+            "earn": "DOT",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.93
+        },
+        "LINK": {
+            "stake": "LINK",
+            "earn": "LINK",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.34
+        },
+        "SXP": {
+            "stake": "SXP",
+            "earn": "SXP",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 1.21
+        },
+        "XVS": {
+            "stake": "XVS",
+            "earn": "XVS",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 13.0
+        },
+        "BTCB": {
+            "stake": "BTCB",
+            "earn": "BTCB",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.39
+        },
+        "LTC": {
+            "stake": "LTC",
+            "earn": "LTC",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.56
+        },
+        "XRP": {
+            "stake": "XRP",
+            "earn": "XRP",
+            "name": "Beefy Finance",
+            "url": "https://app.beefy.finance/",
+            "tag": "beefy",
+            "apy": 0.41
+        }
+    },
+    "acryptos": {
+        "ACS": {
+            "stake": "ACS",
+            "earn": "ACS",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 196.0
+        },
+        "MDX": {
+            "stake": "MDX",
+            "earn": "MDX",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 359.0
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "CAKE",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 146.0
+        },
+        "BNB": {
+            "stake": "BNB",
+            "earn": "Withdrawal fee: 0.1%",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 24.0
+        },
+        "BTC": {
+            "stake": "BTC",
+            "earn": "BTC",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 14.3
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "ETH",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 10.1
+        },
+        "SXP": {
+            "stake": "SXP",
+            "earn": "SXP",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 19.8
+        },
+        "XVS": {
+            "stake": "XVS",
+            "earn": "XVS",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 54.0
+        },
+        "LTC": {
+            "stake": "LTC",
+            "earn": "LTC",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 12.2
+        },
+        "BCH": {
+            "stake": "BCH",
+            "earn": "BCH",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 8.74
+        },
+        "DOT": {
+            "stake": "DOT",
+            "earn": "DOT",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 11.8
+        },
+        "LINK": {
+            "stake": "LINK",
+            "earn": "LINK",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 6.53
+        },
+        "ADA": {
+            "stake": "ADA",
+            "earn": "ADA",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 4.85
+        },
+        "XRP": {
+            "stake": "XRP",
+            "earn": "XRP",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 7.93
+        },
+        "BETH": {
+            "stake": "BETH",
+            "earn": "BETH",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 7.58
+        },
+        "VAI": {
+            "stake": "VAI",
+            "earn": "VAI",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 13.9
+        },
+        "BUSD": {
+            "stake": "BUSD",
+            "earn": "BUSD",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 21.4
+        },
+        "USDT": {
+            "stake": "USDT",
+            "earn": "USDT",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 22.4
+        },
+        "DAI": {
+            "stake": "DAI",
+            "earn": "DAI",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 18.3
+        },
+        "USDC": {
+            "stake": "USDC",
+            "earn": "USDC",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 23.6
+        },
+        "ACSI": {
+            "stake": "ACSI",
+            "earn": "ACSI",
+            "name": "ACryptoS",
+            "url": "https://app.acryptos.com/",
+            "tag": "acryptos",
+            "apy": 123.0
+        }
+    },
+    "jetfuel": {
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "CAKE",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "WBNB": {
+            "stake": "WBNB",
+            "earn": "WBNB",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "BANANA": {
+            "stake": "BANANA",
+            "earn": "BANANA",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "BTCB": {
+            "stake": "BTCB",
+            "earn": "BTCB",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "ETH",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "BNB": {
+            "stake": "BNB",
+            "earn": "BNB",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        },
+        "WINGS": {
+            "stake": "WINGS",
+            "earn": "WINGS",
+            "name": "Jet Fuel Finance",
+            "url": "https://jetfuel.finance/vaults",
+            "tag": "jetfuel",
+            "apy": null
+        }
+    },
+    "cream": {
+        "BNB": {
+            "stake": "BNB",
+            "earn": "BNB",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 8.65
+        },
+        "BTCB": {
+            "stake": "BTCB",
+            "earn": "BTCB",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 1.61
+        },
+        "BUSD": {
+            "stake": "BUSD",
+            "earn": "BUSD",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 9.1
+        },
+        "ETH": {
+            "stake": "ETH",
+            "earn": "ETH",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.11
+        },
+        "USDT": {
+            "stake": "USDT",
+            "earn": "USDT",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 2.66
+        },
+        "USDC": {
+            "stake": "USDC",
+            "earn": "USDC",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 6.8
+        },
+        "XRP": {
+            "stake": "XRP",
+            "earn": "XRP",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 3.27
+        },
+        "LTC": {
+            "stake": "LTC",
+            "earn": "LTC",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.3
+        },
+        "BCH": {
+            "stake": "BCH",
+            "earn": "BCH",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.39
+        },
+        "LINK": {
+            "stake": "LINK",
+            "earn": "LINK",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.6
+        },
+        "DOT": {
+            "stake": "DOT",
+            "earn": "DOT",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 6.13
+        },
+        "ADA": {
+            "stake": "ADA",
+            "earn": "ADA",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.21
+        },
+        "CREAM": {
+            "stake": "CREAM",
+            "earn": "CREAM",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.0
+        },
+        "BAND": {
+            "stake": "BAND",
+            "earn": "BAND",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.41
+        },
+        "EOS": {
+            "stake": "EOS",
+            "earn": "EOS",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.01
+        },
+        "DAI": {
+            "stake": "DAI",
+            "earn": "DAI",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 6.43
+        },
+        "XTZ": {
+            "stake": "XTZ",
+            "earn": "XTZ",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.08
+        },
+        "FIL": {
+            "stake": "FIL",
+            "earn": "FIL",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.02
+        },
+        "YFI": {
+            "stake": "YFI",
+            "earn": "YFI",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.15
+        },
+        "UNI": {
+            "stake": "UNI",
+            "earn": "UNI",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.94
+        },
+        "ATOM": {
+            "stake": "ATOM",
+            "earn": "ATOM",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.29
+        },
+        "ALPHA": {
+            "stake": "ALPHA",
+            "earn": "ALPHA",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 1.02
+        },
+        "TWT": {
+            "stake": "TWT",
+            "earn": "TWT",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 7.58
+        },
+        "CAKE": {
+            "stake": "CAKE",
+            "earn": "CAKE",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 15.23
+        },
+        "XVS": {
+            "stake": "XVS",
+            "earn": "XVS",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 9.13
+        },
+        "BAT": {
+            "stake": "BAT",
+            "earn": "BAT",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 1.28
+        },
+        "VAI": {
+            "stake": "VAI",
+            "earn": "VAI",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 1.07
+        },
+        "AUTO": {
+            "stake": "AUTO",
+            "earn": "AUTO",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 24.83
+        },
+        "RENBTC": {
+            "stake": "RENBTC",
+            "earn": "RENBTC",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.05
+        },
+        "RENZEC": {
+            "stake": "RENZEC",
+            "earn": "RENZEC",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.51
+        },
+        "BETH": {
+            "stake": "BETH",
+            "earn": "BETH",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.04
+        },
+        "IOTX": {
+            "stake": "IOTX",
+            "earn": "IOTX",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 7.48
+        },
+        "SXP": {
+            "stake": "SXP",
+            "earn": "SXP",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.76
+        },
+        "SUSHI": {
+            "stake": "SUSHI",
+            "earn": "SUSHI",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 0.02
+        },
+        "WBNB": {
+            "stake": "WBNB",
+            "earn": "WBNB",
+            "name": "CREAM Finance",
+            "url": "https://app.cream.finance/",
+            "tag": "cream",
+            "apy": 4.51
+        }
+    }
+}
