@@ -73,7 +73,6 @@ class Etl:
 
             if re.search(reg_str, coin):
                 img_coin = find(coin, tokens)
-                #print(coin, img_coin)
 
             try:
                 img_uri = self.IMAGES[img_coin]
@@ -102,7 +101,6 @@ class Etl:
         for tag in farm_tags:
             _tag_coins = self.DATA[tag].keys()
             for coin in _tag_coins:
-                print(tag, coin)
 
                 _coin_keys = self.DATA[tag][coin].keys()
 
@@ -130,8 +128,6 @@ class Etl:
 
                 elif out == None:
 
-                    print("in out none")
-
                     if "apr" in _coin_keys:
                         val = self.DATA[tag][coin]["apr"]
                     elif "apy" in _coin_keys:
@@ -139,8 +135,6 @@ class Etl:
 
                     if type(val) == float:
                         newd = {"t": [time.time()], "values": [val]}
-
-                        print(newd)
 
                         self.db.child("historic").child(
                             tag).child(coin).set(newd)

@@ -14,8 +14,10 @@ import yaml
 from helpers import scroll_down_all, replace, Message
 import re
 from retry import retry
+import logging
 
 
+logger = logging.getLogger(__name__)
 os.environ['MOZ_HEADLESS'] = '1'
 m = Message()
 
@@ -167,8 +169,6 @@ def beefy(name, url, tag):
                 coin = coin.upper()
             elif re.search(reg_str, coin):
                 coin = replace(coin, tokens)
-
-                print(coin)
 
             if farm in farms and coin not in IGNORE:
 
@@ -349,8 +349,7 @@ def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=Fa
         page_source = None
         data = None
         if site["tag"] in ACTIVE_SITES and site["code"] == 1:
-            print(site["tag"])
-            # print(os.path.abspath("geckodriver"))
+            logger.info("Scraping data for site: {}".format(site["tag"]))
             driver = webdriver.Firefox(
                 executable_path=os.path.abspath("geckodriver"))
             URL = site["urls"]
@@ -360,7 +359,7 @@ def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=Fa
             driver.quit()
 
         elif site["tag"] in ACTIVE_SITES and site["tag"] == "cream":
-            print(site["tag"])
+            logger.info("Scraping data for site: {}".format(site["tag"]))
             driver = webdriver.Firefox(
                 executable_path=os.path.abspath("geckodriver"))
             URL = site["urls"]
@@ -387,7 +386,7 @@ def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=Fa
             data = funcs[site["tag"]](site["name"], site["urls"], site["tag"])
 
             if bool(data) == False:
-                print("WARNING NO DATA")
+                logger.warning("NO DATA...sending email")
                 if prod == True:
                     m.email("{} return empty data".format(site["tag"]))
 
@@ -397,7 +396,7 @@ def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=Fa
             data = funcs[site["tag"]](soup, site["name"], URL, site["tag"])
 
             if bool(data) == False:
-                print("WARNING NO DATA")
+                logger.warning("NO DATA...sending email")
                 if prod == True:
                     m.email("{} return empty data".format(site["tag"]))
 
@@ -406,7 +405,7 @@ def scrape_sites(params_path=None, sites_path=None, images_path=None, _export=Fa
 
     if _export == True:
         export(DATA)
-        print("data exported.")
+        logger.info("Data exported...")
 
 
 if __name__ == "__main__":
